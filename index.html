@@ -8,438 +8,438 @@
 </head>
 <body style="margin:0;">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap');
 
-  #dp-mortgage-calc * { box-sizing: border-box; }
+#dp-mortgage-calc * { box-sizing: border-box; }
 
-  #dp-mortgage-calc {
-    margin: 0;
-    background: var(--dpmc-cream, #F6F2EA);
-    font-family: 'Inter', -apple-system, sans-serif;
-    color: var(--dpmc-ink, #1E2530);
-    padding: 32px 16px 60px;
-    --navy: #16283F;
-    --navy-soft: #223B5C;
-    --gold: #BC9A5F;
-    --gold-light: #E4D3AE;
-    --cream: #F6F2EA;
-    --card: #FFFFFF;
-    --ink: #1E2530;
-    --muted: #6B6459;
-    --line: #E4DDD0;
-    --good: #2F6B4F;
-  }
+#dp-mortgage-calc {
+margin: 0;
+background: var(--dpmc-cream, #F6F2EA);
+font-family: 'Inter', -apple-system, sans-serif;
+color: var(--dpmc-ink, #1E2530);
+padding: 32px 16px 60px;
+--navy: #16283F;
+--navy-soft: #223B5C;
+--gold: #BC9A5F;
+--gold-light: #E4D3AE;
+--cream: #F6F2EA;
+--card: #FFFFFF;
+--ink: #1E2530;
+--muted: #6B6459;
+--line: #E4DDD0;
+--good: #2F6B4F;
+}
 
-  #dp-mortgage-calc .wrap {
-    max-width: 1080px;
-    margin: 0 auto;
-  }
+#dp-mortgage-calc .wrap {
+max-width: 1080px;
+margin: 0 auto;
+}
 
-  #dp-mortgage-calc header {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    border-bottom: 2px solid var(--navy);
-    padding-bottom: 18px;
-    margin-bottom: 8px;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
+#dp-mortgage-calc header {
+display: flex;
+align-items: baseline;
+justify-content: space-between;
+border-bottom: 2px solid var(--navy);
+padding-bottom: 18px;
+margin-bottom: 8px;
+flex-wrap: wrap;
+gap: 8px;
+}
 
-  #dp-mortgage-calc .brand {
-    font-family: 'Fraunces', serif;
-    font-weight: 600;
-    font-size: 22px;
-    letter-spacing: 0.02em;
-    color: var(--navy);
-  }
+#dp-mortgage-calc .brand {
+font-family: 'Fraunces', serif;
+font-weight: 600;
+font-size: 22px;
+letter-spacing: 0.02em;
+color: var(--navy);
+}
 
-  #dp-mortgage-calc .brand span { color: var(--gold); }
+#dp-mortgage-calc .brand span { color: var(--gold); }
 
-  #dp-mortgage-calc .tagline {
-    font-size: 13px;
-    color: var(--muted);
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-  }
+#dp-mortgage-calc .tagline {
+font-size: 13px;
+color: var(--muted);
+letter-spacing: 0.03em;
+text-transform: uppercase;
+}
 
-  #dp-mortgage-calc h1 {
-    font-family: 'Fraunces', serif;
-    font-weight: 500;
-    font-size: clamp(28px, 4vw, 40px);
-    color: var(--navy);
-    margin: 22px 0 6px;
-    letter-spacing: -0.01em;
-  }
+#dp-mortgage-calc h1 {
+font-family: 'Fraunces', serif;
+font-weight: 500;
+font-size: clamp(28px, 4vw, 40px);
+color: var(--navy);
+margin: 22px 0 6px;
+letter-spacing: -0.01em;
+}
 
-  #dp-mortgage-calc .sub {
-    color: var(--muted);
-    font-size: 15px;
-    max-width: 620px;
-    line-height: 1.55;
-    margin-bottom: 32px;
-  }
+#dp-mortgage-calc .sub {
+color: var(--muted);
+font-size: 15px;
+max-width: 620px;
+line-height: 1.55;
+margin-bottom: 32px;
+}
 
-  #dp-mortgage-calc .grid {
-    display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: 24px;
-    align-items: start;
-  }
+#dp-mortgage-calc .grid {
+display: grid;
+grid-template-columns: 1.15fr 0.85fr;
+gap: 24px;
+align-items: start;
+}
 
-  @media (max-width: 860px) {
-    #dp-mortgage-calc .grid { grid-template-columns: 1fr; }
-    #dp-mortgage-calc .results { position: static !important; }
-  }
+@media (max-width: 860px) {
+#dp-mortgage-calc .grid { grid-template-columns: 1fr; }
+#dp-mortgage-calc .results { position: static !important; }
+}
 
-  #dp-mortgage-calc .card {
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-radius: 14px;
-    padding: 28px;
-  }
+#dp-mortgage-calc .card {
+background: var(--card);
+border: 1px solid var(--line);
+border-radius: 14px;
+padding: 28px;
+}
 
-  #dp-mortgage-calc .section-label {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.09em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin: 0 0 18px;
-  }
+#dp-mortgage-calc .section-label {
+font-size: 11px;
+font-weight: 700;
+letter-spacing: 0.09em;
+text-transform: uppercase;
+color: var(--gold);
+margin: 0 0 18px;
+}
 
-  #dp-mortgage-calc .section-label:not(:first-child) { margin-top: 30px; }
+#dp-mortgage-calc .section-label:not(:first-child) { margin-top: 30px; }
 
-  #dp-mortgage-calc .field {
-    margin-bottom: 18px;
-  }
+#dp-mortgage-calc .field {
+margin-bottom: 18px;
+}
 
-  #dp-mortgage-calc .field label {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    font-size: 13.5px;
-    font-weight: 600;
-    color: var(--navy);
-    margin-bottom: 6px;
-  }
+#dp-mortgage-calc .field label {
+display: flex;
+justify-content: space-between;
+align-items: baseline;
+font-size: 13.5px;
+font-weight: 600;
+color: var(--navy);
+margin-bottom: 6px;
+}
 
-  #dp-mortgage-calc .field .hint {
-    font-size: 11.5px;
-    color: var(--muted);
-    font-weight: 400;
-  }
+#dp-mortgage-calc .field .hint {
+font-size: 11.5px;
+color: var(--muted);
+font-weight: 400;
+}
 
-  #dp-mortgage-calc .input-money {
-    position: relative;
-  }
+#dp-mortgage-calc .input-money {
+position: relative;
+}
 
-  #dp-mortgage-calc .input-money::before {
-    content: "$";
-    position: absolute;
-    left: 14px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--muted);
-    font-weight: 500;
-    pointer-events: none;
-  }
+#dp-mortgage-calc .input-money::before {
+content: "$";
+position: absolute;
+left: 14px;
+top: 50%;
+transform: translateY(-50%);
+color: var(--muted);
+font-weight: 500;
+pointer-events: none;
+}
 
-  #dp-mortgage-calc .input-money input[type="text"] { padding-left: 28px; }
+#dp-mortgage-calc .input-money input[type="text"] { padding-left: 28px; }
 
-  #dp-mortgage-calc .input-percent {
-    position: relative;
-  }
+#dp-mortgage-calc .input-percent {
+position: relative;
+}
 
-  #dp-mortgage-calc .input-percent::after {
-    content: "%";
-    position: absolute;
-    right: 14px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--muted);
-    font-weight: 500;
-    pointer-events: none;
-  }
+#dp-mortgage-calc .input-percent::after {
+content: "%";
+position: absolute;
+right: 14px;
+top: 50%;
+transform: translateY(-50%);
+color: var(--muted);
+font-weight: 500;
+pointer-events: none;
+}
 
-  #dp-mortgage-calc .input-percent input[type="text"] { padding-left: 14px; padding-right: 30px; }
+#dp-mortgage-calc .input-percent input[type="text"] { padding-left: 14px; padding-right: 30px; }
 
-  #dp-mortgage-calc .readonly-line {
-    background: #F1EEE6;
-    border: 1.5px solid var(--line);
-    border-radius: 8px;
-    padding: 11px 14px;
-    font-size: 14px;
-    color: var(--muted);
-  }
+#dp-mortgage-calc .readonly-line {
+background: #F1EEE6;
+border: 1.5px solid var(--line);
+border-radius: 8px;
+padding: 11px 14px;
+font-size: 14px;
+color: var(--muted);
+}
 
-  #dp-mortgage-calc .readonly-line strong { color: var(--navy); }
+#dp-mortgage-calc .readonly-line strong { color: var(--navy); }
 
-  #dp-mortgage-calc .tip {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background: var(--line);
-    color: var(--muted);
-    font-size: 10px;
-    font-weight: 700;
-    cursor: help;
-    flex-shrink: 0;
-  }
+#dp-mortgage-calc .tip {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+width: 15px;
+height: 15px;
+border-radius: 50%;
+background: var(--line);
+color: var(--muted);
+font-size: 10px;
+font-weight: 700;
+cursor: help;
+flex-shrink: 0;
+}
 
-  #dp-mortgage-calc input[type="text"], #dp-mortgage-calc input[type="number"], #dp-mortgage-calc select {
-    width: 100%;
-    padding: 11px 14px;
-    border: 1.5px solid var(--line);
-    border-radius: 8px;
-    font-size: 15px;
-    font-family: 'Inter', sans-serif;
-    color: var(--ink);
-    background: #FDFCFA;
-    transition: border-color 0.15s;
-  }
+#dp-mortgage-calc input[type="text"], #dp-mortgage-calc input[type="number"], #dp-mortgage-calc select {
+width: 100%;
+padding: 11px 14px;
+border: 1.5px solid var(--line);
+border-radius: 8px;
+font-size: 15px;
+font-family: 'Inter', sans-serif;
+color: var(--ink);
+background: #FDFCFA;
+transition: border-color 0.15s;
+}
 
-  #dp-mortgage-calc input:focus, #dp-mortgage-calc select:focus {
-    outline: none;
-    border-color: var(--gold);
-    background: #fff;
-  }
+#dp-mortgage-calc input:focus, #dp-mortgage-calc select:focus {
+outline: none;
+border-color: var(--gold);
+background: #fff;
+}
 
-  #dp-mortgage-calc select { cursor: pointer; }
+#dp-mortgage-calc select { cursor: pointer; }
 
-  #dp-mortgage-calc .tier-note {
-    font-size: 12px;
-    color: var(--muted);
-    margin-top: 6px;
-    line-height: 1.5;
-  }
+#dp-mortgage-calc .tier-note {
+font-size: 12px;
+color: var(--muted);
+margin-top: 6px;
+line-height: 1.5;
+}
 
-  #dp-mortgage-calc .row2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-  }
+#dp-mortgage-calc .row2 {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 14px;
+}
 
-  #dp-mortgage-calc .results {
-    position: sticky;
-    top: 24px;
-    background: var(--navy);
-    border-radius: 14px;
-    padding: 30px 28px;
-    color: #fff;
-  }
+#dp-mortgage-calc .results {
+position: sticky;
+top: 24px;
+background: var(--navy);
+border-radius: 14px;
+padding: 30px 28px;
+color: #fff;
+}
 
-  #dp-mortgage-calc .results .section-label { color: var(--gold-light); }
+#dp-mortgage-calc .results .section-label { color: var(--gold-light); }
 
-  #dp-mortgage-calc .headline-number {
-    font-family: 'Fraunces', serif;
-    font-size: clamp(34px, 4.5vw, 46px);
-    font-weight: 500;
-    color: #fff;
-    margin: 4px 0 2px;
-    letter-spacing: -0.01em;
-  }
+#dp-mortgage-calc .headline-number {
+font-family: 'Fraunces', serif;
+font-size: clamp(34px, 4.5vw, 46px);
+font-weight: 500;
+color: #fff;
+margin: 4px 0 2px;
+letter-spacing: -0.01em;
+}
 
-  #dp-mortgage-calc .headline-label {
-    font-size: 13px;
-    color: var(--gold-light);
-    margin-bottom: 26px;
-  }
+#dp-mortgage-calc .headline-label {
+font-size: 13px;
+color: var(--gold-light);
+margin-bottom: 26px;
+}
 
-  #dp-mortgage-calc .line {
-    display: flex;
-    justify-content: space-between;
-    font-size: 13.5px;
-    padding: 9px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    color: #D9DEE6;
-  }
+#dp-mortgage-calc .line {
+display: flex;
+justify-content: space-between;
+font-size: 13.5px;
+padding: 9px 0;
+border-bottom: 1px solid rgba(255,255,255,0.1);
+color: #D9DEE6;
+}
 
-  #dp-mortgage-calc .line span:last-child {
-    font-variant-numeric: tabular-nums;
-    color: #fff;
-    font-weight: 500;
-  }
+#dp-mortgage-calc .line span:last-child {
+font-variant-numeric: tabular-nums;
+color: #fff;
+font-weight: 500;
+}
 
-  #dp-mortgage-calc .line.total {
-    border-top: 2px solid var(--gold);
-    border-bottom: none;
-    margin-top: 8px;
-    padding-top: 14px;
-    font-size: 15px;
-    font-weight: 600;
-  }
+#dp-mortgage-calc .line.total {
+border-top: 2px solid var(--gold);
+border-bottom: none;
+margin-top: 8px;
+padding-top: 14px;
+font-size: 15px;
+font-weight: 600;
+}
 
-  #dp-mortgage-calc .line.total span { color: #fff; }
+#dp-mortgage-calc .line.total span { color: #fff; }
 
-  #dp-mortgage-calc .extra-stats {
-    margin-top: 22px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-  }
+#dp-mortgage-calc .extra-stats {
+margin-top: 22px;
+padding-top: 20px;
+border-top: 1px solid rgba(255,255,255,0.1);
+}
 
-  #dp-mortgage-calc .extra-stats .line { border-bottom: none; padding: 6px 0; }
+#dp-mortgage-calc .extra-stats .line { border-bottom: none; padding: 6px 0; }
 
-  #dp-mortgage-calc .disclaimer {
-    margin-top: 26px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    font-size: 11.5px;
-    line-height: 1.6;
-    color: #B7C0CE;
-  }
+#dp-mortgage-calc .disclaimer {
+margin-top: 26px;
+padding-top: 20px;
+border-top: 1px solid rgba(255,255,255,0.1);
+font-size: 11.5px;
+line-height: 1.6;
+color: #B7C0CE;
+}
 
-  #dp-mortgage-calc .cta-row {
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-  }
+#dp-mortgage-calc .cta-row {
+margin-top: 20px;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 10px;
+}
 
-  #dp-mortgage-calc .cta-btn {
-    display: block;
-    background: var(--gold);
-    color: var(--navy);
-    text-align: center;
-    padding: 13px 8px;
-    border-radius: 8px;
-    font-weight: 700;
-    font-size: 14px;
-    letter-spacing: 0.01em;
-    text-decoration: none;
-    transition: filter 0.15s;
-  }
+#dp-mortgage-calc .cta-btn {
+display: block;
+background: var(--gold);
+color: var(--navy);
+text-align: center;
+padding: 13px 8px;
+border-radius: 8px;
+font-weight: 700;
+font-size: 14px;
+letter-spacing: 0.01em;
+text-decoration: none;
+transition: filter 0.15s;
+}
 
-  #dp-mortgage-calc .cta-btn:hover, #dp-mortgage-calc .cta-btn:active {
-    filter: brightness(1.08);
-  }
+#dp-mortgage-calc .cta-btn:hover, #dp-mortgage-calc .cta-btn:active {
+filter: brightness(1.08);
+}
 
-  #dp-mortgage-calc .cta-btn.secondary {
-    background: transparent;
-    border: 1.5px solid var(--gold);
-    color: var(--gold-light);
-  }
+#dp-mortgage-calc .cta-btn.secondary {
+background: transparent;
+border: 1.5px solid var(--gold);
+color: var(--gold-light);
+}
 
-  #dp-mortgage-calc .cta-btn .small {
-    display: block;
-    font-weight: 500;
-    font-size: 11px;
-    margin-top: 2px;
-    opacity: 0.85;
-  }
+#dp-mortgage-calc .cta-btn .small {
+display: block;
+font-weight: 500;
+font-size: 11px;
+margin-top: 2px;
+opacity: 0.85;
+}
 
-  #dp-mortgage-calc footer {
-    text-align: center;
-    margin-top: 36px;
-    font-size: 12px;
-    color: var(--muted);
-  }
+#dp-mortgage-calc footer {
+text-align: center;
+margin-top: 36px;
+font-size: 12px;
+color: var(--muted);
+}
 </style>
 
 <div id="dp-mortgage-calc">
 <div class="wrap">
 
-  <header>
-    <div class="brand">DP <span>Homes</span></div>
-    <div class="tagline">Keller Williams Bellevue</div>
-  </header>
+<header>
+<div class="brand">DP <span>Homes</span></div>
+<div class="tagline">Keller Williams Bellevue</div>
+</header>
 
-  <h1>What will your monthly payment be?</h1>
-  <p class="sub">Everyone talks about purchase price, but you're the one quietly running the numbers, figuring out what it actually costs you every month. That's the number that decides whether this works for your life. This tool does that math with you.</p>
+<h1>What will your monthly payment be?</h1>
+<p class="sub">Everyone talks about purchase price, but you're the one quietly running the numbers, figuring out what it actually costs you every month. That's the number that decides whether this works for your life. This tool does that math with you.</p>
 
-  <div class="grid">
+<div class="grid">
 
-    <div class="card">
-      <p class="section-label">The Basics</p>
+<div class="card">
+<p class="section-label">The Basics</p>
 
-      <div class="field">
-        <label>Home Price</label>
-        <div class="input-money"><input type="text" id="dpmc-price" value="850,000" inputmode="numeric"></div>
-      </div>
+<div class="field">
+<label>Home Price</label>
+<div class="input-money"><input type="text" id="dpmc-price" value="850,000" inputmode="numeric"></div>
+</div>
 
-      <div class="row2">
-        <div class="field">
-          <label>Down Payment</label>
-          <div class="input-percent"><input type="text" id="dpmc-downPct" value="20" inputmode="decimal"></div>
-        </div>
-        <div class="field">
-          <label>&nbsp;<span class="hint">amount</span></label>
-          <div class="readonly-line"><strong id="dpmc-downAmtDisplay">$0</strong></div>
-        </div>
-      </div>
+<div class="row2">
+<div class="field">
+<label>Down Payment</label>
+<div class="input-percent"><input type="text" id="dpmc-downPct" value="20" inputmode="decimal"></div>
+</div>
+<div class="field">
+<label>&nbsp;<span class="hint">amount</span></label>
+<div class="readonly-line"><strong id="dpmc-downAmtDisplay">$0</strong></div>
+</div>
+</div>
 
-      <div class="row2">
-        <div class="field">
-          <label>Loan Term</label>
-          <select id="dpmc-term">
-            <option value="30">30-Year Fixed</option>
-            <option value="15">15-Year Fixed</option>
-          </select>
-        </div>
-        <div class="field">
-          <label>Interest Rate <span class="tip" title="Freddie Mac PMMS weekly average as of Aug 27, 2026: 6.66% (30-yr), 5.98% (15-yr). Your actual rate depends on your lender, credit, and loan program.">?</span></label>
-          <div class="input-percent"><input type="text" id="dpmc-rate" value="6.66" inputmode="decimal"></div>
-        </div>
-      </div>
-      <p class="tier-note" style="margin-top:-10px; margin-bottom:18px;">Rate defaults to the current Freddie Mac 30-year average. Switching to a 15-year term does not auto-update the rate &mdash; enter your own quoted rate for the most accurate estimate.</p>
+<div class="row2">
+<div class="field">
+<label>Loan Term</label>
+<select id="dpmc-term">
+<option value="30">30-Year Fixed</option>
+<option value="15">15-Year Fixed</option>
+</select>
+</div>
+<div class="field">
+<label>Interest Rate <span class="tip" title="Freddie Mac PMMS weekly average as of Aug 27, 2026: 6.66% (30-yr), 5.98% (15-yr). Your actual rate depends on your lender, credit, and loan program.">?</span></label>
+<div class="input-percent"><input type="text" id="dpmc-rate" value="6.66" inputmode="decimal"></div>
+</div>
+</div>
+<p class="tier-note" style="margin-top:-10px; margin-bottom:18px;">Rate defaults to the current Freddie Mac 30-year average. Switching to a 15-year term does not auto-update the rate &mdash; enter your own quoted rate for the most accurate estimate.</p>
 
-      <p class="section-label">Estimated Costs</p>
+<p class="section-label">Estimated Costs</p>
 
-      <div class="row2">
-        <div class="field">
-          <label>Property Tax <span class="tip" title="King County's average effective rate is about 0.82% of home value per year, but it varies by city and local levies. Confirm the exact figure with the county assessor.">?</span></label>
-          <div class="input-percent"><input type="text" id="dpmc-taxPct" value="0.82" inputmode="decimal"></div>
-        </div>
-        <div class="field">
-          <label>Home Insurance <span class="hint">per year</span></label>
-          <div class="input-money"><input type="text" id="dpmc-insurance" value="1,474" inputmode="numeric"></div>
-        </div>
-      </div>
-      <p class="tier-note" style="margin-top:-10px; margin-bottom:18px;">Property tax and insurance defaults are Seattle-area averages, not this specific property. Confirm actual figures before relying on this estimate.</p>
+<div class="row2">
+<div class="field">
+<label>Property Tax <span class="tip" title="King County's average effective rate is about 0.82% of home value per year, but it varies by city and local levies. Confirm the exact figure with the county assessor.">?</span></label>
+<div class="input-percent"><input type="text" id="dpmc-taxPct" value="0.82" inputmode="decimal"></div>
+</div>
+<div class="field">
+<label>Home Insurance <span class="tip" title="Washington homeowners insurance averages roughly 0.20% of home value annually (about $1,474/yr on an $850K home, per MoneyGeek's WA state data). Premiums scale with rebuild cost, so higher-value homes typically pay proportionally more. Confirm with an insurer for an actual quote.">?</span></label>
+<div class="input-percent"><input type="text" id="dpmc-insurancePct" value="0.20" inputmode="decimal"></div>
+</div>
+</div>
+<p class="tier-note" style="margin-top:-10px; margin-bottom:18px;">Property tax and insurance defaults are Seattle-area averages, not this specific property. Confirm actual figures before relying on this estimate.</p>
 
-      <div class="field">
-        <label>HOA Dues <span class="hint">per month, if applicable</span></label>
-        <div class="input-money"><input type="text" id="dpmc-hoa" value="0" inputmode="numeric"></div>
-      </div>
+<div class="field">
+<label>HOA Dues <span class="hint">per month, if applicable</span></label>
+<div class="input-money"><input type="text" id="dpmc-hoa" value="0" inputmode="numeric"></div>
+</div>
 
-    </div>
+</div>
 
-    <div class="results">
-      <p class="section-label">Estimated Monthly Payment</p>
-      <div class="headline-number" id="dpmc-totalOut">$0</div>
-      <div class="headline-label">principal, interest, taxes &amp; insurance</div>
+<div class="results">
+<p class="section-label">Estimated Monthly Payment</p>
+<div class="headline-number" id="dpmc-totalOut">$0</div>
+<div class="headline-label">principal, interest, taxes &amp; insurance</div>
 
-      <div class="line"><span>Principal &amp; Interest</span><span id="dpmc-l-pi">$0</span></div>
-      <div class="line"><span>Property Tax</span><span id="dpmc-l-tax">$0</span></div>
-      <div class="line"><span>Home Insurance</span><span id="dpmc-l-ins">$0</span></div>
-      <div class="line"><span>HOA Dues</span><span id="dpmc-l-hoa">$0</span></div>
-      <div class="line total"><span>Total Monthly Payment</span><span id="dpmc-l-total">$0</span></div>
+<div class="line"><span>Principal &amp; Interest</span><span id="dpmc-l-pi">$0</span></div>
+<div class="line"><span>Property Tax</span><span id="dpmc-l-tax">$0</span></div>
+<div class="line"><span>Home Insurance</span><span id="dpmc-l-ins">$0</span></div>
+<div class="line"><span>HOA Dues</span><span id="dpmc-l-hoa">$0</span></div>
+<div class="line total"><span>Total Monthly Payment</span><span id="dpmc-l-total">$0</span></div>
 
-      <div class="extra-stats">
-        <div class="line"><span>Loan Amount</span><span id="dpmc-l-loan">$0</span></div>
-        <div class="line"><span>Total Interest Paid</span><span id="dpmc-l-interest">$0</span></div>
-      </div>
+<div class="extra-stats">
+<div class="line"><span>Loan Amount</span><span id="dpmc-l-loan">$0</span></div>
+<div class="line"><span>Total Interest Paid</span><span id="dpmc-l-interest">$0</span></div>
+</div>
 
-      <div class="cta-row">
-        <a href="tel:+12067193059" class="cta-btn">Call / Text
-          <span class="small">206.719.3059</span>
-        </a>
-        <a href="mailto:davepiedrahita@kw.com?subject=My%20Mortgage%20Estimate" class="cta-btn secondary" id="dpmc-emailBtn">Email Dave
-          <span class="small" id="dpmc-emailBtnText">davepiedrahita@kw.com</span>
-        </a>
-      </div>
+<div class="cta-row">
+<a href="tel:+12067193059" class="cta-btn">Call / Text
+<span class="small">206.719.3059</span>
+</a>
+<a href="mailto:davepiedrahita@kw.com?subject=My%20Mortgage%20Estimate" class="cta-btn secondary" id="dpmc-emailBtn">Email Dave
+<span class="small" id="dpmc-emailBtnText">davepiedrahita@kw.com</span>
+</a>
+</div>
 
-      <div class="disclaimer">
-        This is a planning estimate only, not a loan offer or pre-approval. It does not include mortgage insurance (PMI) for down payments under 20%, and actual rates, taxes, and insurance costs vary by lender, property, and program. Talk to Dave and a licensed loan officer before relying on this number for any decision.
-      </div>
-    </div>
+<div class="disclaimer">
+This is a planning estimate only, not a loan offer or pre-approval. It does not include mortgage insurance (PMI) for down payments under 20%, and actual rates, taxes, and insurance costs vary by lender, property, and program. Talk to Dave and a licensed loan officer before relying on this number for any decision.
+</div>
+</div>
 
-  </div>
+</div>
 
-  <footer>Dave Piedrahita &middot; DP Homes at Keller Williams Bellevue &middot; WA License #128343</footer>
+<footer>Dave Piedrahita &middot; DP Homes at Keller Williams Bellevue &middot; WA License #128343</footer>
 
 </div>
 </div>
@@ -447,94 +447,94 @@
 <script>
 (function() {
 function dpmcParseMoney(id) {
-  const el = document.getElementById(id);
-  const val = parseFloat(el.value.replace(/[^0-9.]/g, ''));
-  return isNaN(val) ? 0 : val;
+const el = document.getElementById(id);
+const val = parseFloat(el.value.replace(/[^0-9.]/g, ''));
+return isNaN(val) ? 0 : val;
 }
 
 function dpmcParsePercent(id) {
-  const el = document.getElementById(id);
-  const val = parseFloat(el.value.replace(/[^0-9.]/g, ''));
-  return isNaN(val) ? 0 : val / 100;
+const el = document.getElementById(id);
+const val = parseFloat(el.value.replace(/[^0-9.]/g, ''));
+return isNaN(val) ? 0 : val / 100;
 }
 
 function dpmcFmt(n) {
-  return '$' + Math.round(n).toLocaleString('en-US');
+return '$' + Math.round(n).toLocaleString('en-US');
 }
 
 function dpmcCalculate() {
-  const price = dpmcParseMoney('dpmc-price');
-  const downPct = dpmcParsePercent('dpmc-downPct');
-  const termYears = parseInt(document.getElementById('dpmc-term').value, 10);
-  const annualRate = dpmcParsePercent('dpmc-rate');
-  const taxPct = dpmcParsePercent('dpmc-taxPct');
-  const annualInsurance = dpmcParseMoney('dpmc-insurance');
-  const hoaMonthly = dpmcParseMoney('dpmc-hoa');
+const price = dpmcParseMoney('dpmc-price');
+const downPct = dpmcParsePercent('dpmc-downPct');
+const termYears = parseInt(document.getElementById('dpmc-term').value, 10);
+const annualRate = dpmcParsePercent('dpmc-rate');
+const taxPct = dpmcParsePercent('dpmc-taxPct');
+const insurancePct = dpmcParsePercent('dpmc-insurancePct');
+const hoaMonthly = dpmcParseMoney('dpmc-hoa');
 
-  const downAmt = price * downPct;
-  const loanAmount = Math.max(0, price - downAmt);
-  const monthlyRate = annualRate / 12;
-  const numPayments = termYears * 12;
+const downAmt = price * downPct;
+const loanAmount = Math.max(0, price - downAmt);
+const monthlyRate = annualRate / 12;
+const numPayments = termYears * 12;
 
-  let monthlyPI = 0;
-  if (loanAmount > 0) {
-    if (monthlyRate > 0) {
-      monthlyPI = loanAmount * (monthlyRate * Math.pow(1 + monthlyRate, numPayments)) / (Math.pow(1 + monthlyRate, numPayments) - 1);
-    } else {
-      monthlyPI = loanAmount / numPayments;
-    }
-  }
+let monthlyPI = 0;
+if (loanAmount > 0) {
+if (monthlyRate > 0) {
+monthlyPI = loanAmount * (monthlyRate * Math.pow(1 + monthlyRate, numPayments)) / (Math.pow(1 + monthlyRate, numPayments) - 1);
+} else {
+monthlyPI = loanAmount / numPayments;
+}
+}
 
-  const monthlyTax = (price * taxPct) / 12;
-  const monthlyInsurance = annualInsurance / 12;
-  const total = monthlyPI + monthlyTax + monthlyInsurance + hoaMonthly;
-  const totalInterest = (monthlyPI * numPayments) - loanAmount;
+const monthlyTax = (price * taxPct) / 12;
+const monthlyInsurance = (price * insurancePct) / 12;
+const total = monthlyPI + monthlyTax + monthlyInsurance + hoaMonthly;
+const totalInterest = (monthlyPI * numPayments) - loanAmount;
 
-  document.getElementById('dpmc-downAmtDisplay').textContent = dpmcFmt(downAmt);
+document.getElementById('dpmc-downAmtDisplay').textContent = dpmcFmt(downAmt);
 
-  document.getElementById('dpmc-l-pi').textContent = dpmcFmt(monthlyPI);
-  document.getElementById('dpmc-l-tax').textContent = dpmcFmt(monthlyTax);
-  document.getElementById('dpmc-l-ins').textContent = dpmcFmt(monthlyInsurance);
-  document.getElementById('dpmc-l-hoa').textContent = dpmcFmt(hoaMonthly);
-  document.getElementById('dpmc-l-total').textContent = dpmcFmt(total);
-  document.getElementById('dpmc-totalOut').textContent = dpmcFmt(total);
+document.getElementById('dpmc-l-pi').textContent = dpmcFmt(monthlyPI);
+document.getElementById('dpmc-l-tax').textContent = dpmcFmt(monthlyTax);
+document.getElementById('dpmc-l-ins').textContent = dpmcFmt(monthlyInsurance);
+document.getElementById('dpmc-l-hoa').textContent = dpmcFmt(hoaMonthly);
+document.getElementById('dpmc-l-total').textContent = dpmcFmt(total);
+document.getElementById('dpmc-totalOut').textContent = dpmcFmt(total);
 
-  document.getElementById('dpmc-l-loan').textContent = dpmcFmt(loanAmount);
-  document.getElementById('dpmc-l-interest').textContent = dpmcFmt(Math.max(0, totalInterest));
+document.getElementById('dpmc-l-loan').textContent = dpmcFmt(loanAmount);
+document.getElementById('dpmc-l-interest').textContent = dpmcFmt(Math.max(0, totalInterest));
 }
 
 function dpmcFormatMoneyInput(el) {
-  const cursorFromEnd = el.value.length - el.selectionStart;
-  const raw = el.value.replace(/[^0-9]/g, '');
-  const formatted = raw === '' ? '' : parseInt(raw, 10).toLocaleString('en-US');
-  el.value = formatted;
-  const newPos = Math.max(0, formatted.length - cursorFromEnd);
-  el.setSelectionRange(newPos, newPos);
+const cursorFromEnd = el.value.length - el.selectionStart;
+const raw = el.value.replace(/[^0-9]/g, '');
+const formatted = raw === '' ? '' : parseInt(raw, 10).toLocaleString('en-US');
+el.value = formatted;
+const newPos = Math.max(0, formatted.length - cursorFromEnd);
+el.setSelectionRange(newPos, newPos);
 }
 
 document.querySelectorAll('#dp-mortgage-calc input, #dp-mortgage-calc select').forEach(function(el) {
-  el.addEventListener('input', function() {
-    if (el.parentElement && el.parentElement.classList.contains('input-money')) {
-      dpmcFormatMoneyInput(el);
-    }
-    dpmcCalculate();
-  });
-  el.addEventListener('change', dpmcCalculate);
+el.addEventListener('input', function() {
+if (el.parentElement && el.parentElement.classList.contains('input-money')) {
+dpmcFormatMoneyInput(el);
+}
+dpmcCalculate();
+});
+el.addEventListener('change', dpmcCalculate);
 });
 
 const dpmcEmailBtn = document.getElementById('dpmc-emailBtn');
 if (dpmcEmailBtn) {
-  dpmcEmailBtn.addEventListener('click', function() {
-    const address = 'davepiedrahita@kw.com';
-    if (navigator.clipboard) {
-      navigator.clipboard.writeText(address).then(function() {
-        const label = document.getElementById('dpmc-emailBtnText');
-        const original = label.textContent;
-        label.textContent = 'Copied to clipboard!';
-        setTimeout(function() { label.textContent = original; }, 2500);
-      });
-    }
-  });
+dpmcEmailBtn.addEventListener('click', function() {
+const address = 'davepiedrahita@kw.com';
+if (navigator.clipboard) {
+navigator.clipboard.writeText(address).then(function() {
+const label = document.getElementById('dpmc-emailBtnText');
+const original = label.textContent;
+label.textContent = 'Copied to clipboard!';
+setTimeout(function() { label.textContent = original; }, 2500);
+});
+}
+});
 }
 
 dpmcCalculate();
